@@ -21,5 +21,5 @@ test('Login submit', async () => {
     await soucedemo.fillFirstName('standard_user')
     await soucedemo.fillPasswordInput('secret_sauce')
     await soucedemo.completedLoginization()
-  
+    await soucedemo.assertNextPageUrl('https://www.saucedemo.com/inventory.html')
 });

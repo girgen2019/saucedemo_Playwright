@@ -4,6 +4,8 @@ import { Page, Locator, expect } from '@playwright/test';
 
 export class LoginPage {
   private readonly baseUrl = 'https://www.saucedemo.com/';
+  private readonly baseUrlProduct = 'https://www.saucedemo.com/inventory.html';
+
 
   constructor(private page: Page) {}
 
@@ -39,5 +41,12 @@ export class LoginPage {
     await this.clickButton.click();
   }
 
+  async goToProductsPage(): Promise<void> {
+    await this.page.goto(this.baseUrlProduct);
+  }
+
+  async assertNextPageUrl(path: string) {
+    await expect(this.page).toHaveURL(path);    
+  }
 
 }
