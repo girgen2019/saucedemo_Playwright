@@ -19,6 +19,7 @@ test('Login submit', async () => {
     await soucedemo.gotoWebPage()
     await soucedemo.assertUrlContains('https://www.saucedemo.com/')
     await soucedemo.fillFirstName('standard_user')
-
+    await soucedemo.fillPasswordInput('secret_sauce')
+    await soucedemo.completedLoginization()
   
 });

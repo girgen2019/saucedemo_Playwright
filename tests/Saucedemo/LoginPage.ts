@@ -23,5 +23,21 @@ export class LoginPage {
     await this.firstNameInput.fill(name);
   }
 
+  get passwordInput(): Locator {
+    return this.page.locator('#password');
+  }
+
+  async fillPasswordInput(name: string) {
+    await this.passwordInput.fill(name);
+  }
+
+  get clickButton() {
+    return this.page.locator('#login-button');
+  }
+
+  async completedLoginization() {
+    await this.clickButton.click();
+  }
+
 
 }
