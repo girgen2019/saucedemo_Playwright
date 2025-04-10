@@ -9,7 +9,7 @@ test('Login submit', async () => {
 
     const browser = await chromium.launch({
       headless: false,
-      slowMo: 1000,
+      slowMo: 500,
     });
 
     const context = await browser.newContext();
